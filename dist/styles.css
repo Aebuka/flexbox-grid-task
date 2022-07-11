@@ -28,8 +28,14 @@ main {
 
 .card {
     display: flex;
-    width: 50%;
-    margin: auto;
+    width: 55%;
+    margin: 0 auto 20px;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.card p {
+    height: 215px;
 }
 
 img {
@@ -55,12 +61,24 @@ p {
     background: hsl(31, 77%, 52%);
 }
 
+.sedan-column .btn {
+    color: hsl(31, 77%, 52%);
+}
+
 .suv-column {
     background: hsl(184, 100%, 22%);
 }
 
+.suv-column .btn {
+    color: hsl(184, 100%, 22%);
+}
+
 .luxury-column {
     background: hsl(179, 100%, 13%);
+}
+
+.luxury-column .btn {
+    color: hsl(179, 100%, 13%);
 }
 
 .btn {
@@ -76,5 +94,12 @@ p {
     border: 2px solid;
     background: transparent;
     color: white;
+}
+
+@media (max-width:768px) {
+    .card {
+        flex-direction: column;
+        width: 50%;
+    }
 }
 
